@@ -1,0 +1,25 @@
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <% _.each(posts,function(post){ %> 
+                  <div class="post-preview" data-id="post">
+                      <a id="btnDirectToPost">
+                          <h2 class="post-title" style="cursor:pointer" data-id="title"><%= post.title %></h2>
+                          <!--<h3 class="post-subtitle"  data-id="subtitle"><%= post.subtitle %></h3>-->
+                      </a>
+                      <p class="post-meta">
+                          Posted by <a href="#"  data-id="author"><%= post.author %></a> on <label data-id="date"><%= post.date %></label>
+                      </p>
+                  </div>
+            <% }) %> 
+            <hr>
+            <!-- Pager -->
+            <ul class="pager">
+                <li class="next">
+                    <a href="#">查看更多 &rarr;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
